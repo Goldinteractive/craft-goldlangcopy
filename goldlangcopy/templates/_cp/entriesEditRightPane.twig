@@ -2,7 +2,7 @@
 
 <div id='goldLangCopy' class='pane meta'>
     {{ forms.lightswitchField({
-        label: 'Sprachen überschreiben'|t,
+        label: 'Seiten-Inhalte beim Speichern klonen'|t,
         id: 'localeSync-toggle',
         name: 'goldLangCopy[enabled]',
         on: false,
@@ -11,7 +11,7 @@
     <div class="meta hidden" id="goldLangCopy-options">
         {# Intentionally passing non-empty array to uncheck "all" #}
         {{ forms.radioGroupField({
-            label: "Sprachen"|t,
+            label: "Ziel-Sprache:"|t,
             id: 'localeSync-targets',
             name: 'goldLangCopy[targets]',
             options: craft.goldLangCopy.getLocaleInputOptions(null, [localeId]),
